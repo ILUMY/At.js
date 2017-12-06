@@ -1146,12 +1146,16 @@ Api = {
     this.setupRootElement(iframe, asRoot);
     return null;
   },
-  run: function() {
-    return this.dispatch();
+  run: function(e) {
+    return this.dispatch(e);
   },
   destroy: function() {
     this.shutdown();
     return this.$inputor.data('atwho', null);
+  },
+  lookUp: function(e) {
+		var ref;
+		return (ref = this.controller()) != null ? ref.lookUp(e) : void 0;		
   }
 };
 
